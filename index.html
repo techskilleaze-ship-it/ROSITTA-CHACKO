@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>html{scroll-behavior:smooth}body{margin:0;background:#eceae3}*{box-sizing:border-box}a{color:inherit;text-decoration:none}a:hover{color:oklch(0.55 0.22 350)}::selection{background:oklch(0.55 0.22 350);color:#fff}</style>
+</helmet>
+<div ref="{{ rootRef }}" style="background:#eceae3;color:#111;font-family:Archivo, sans-serif;overflow-x:hidden;position:relative">
+
+<nav data-nav="" style="position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:18px clamp(20px,4vw,64px);color:#111;border-bottom:1px solid transparent;transition:background .4s, color .4s, border-color .4s, backdrop-filter .4s">
+  <a href="#top" style="display:flex;align-items:center;gap:10px;font-weight:700;font-size:21px;letter-spacing:-0.03em">
+    <span style="position:relative;width:22px;height:22px;display:inline-block">
+      <span style="position:absolute;inset:3px;background:oklch(0.55 0.22 350);transform:rotate(45deg);border-radius:3px"></span>
+      <span style="position:absolute;right:-3px;top:-3px;width:8px;height:8px;border-radius:50%;background:oklch(0.55 0.15 245)"></span>
+    </span>
+    <span>rositta<span style="color:oklch(0.55 0.22 350)">.</span></span>
+  </a>
+  <div style="display:flex;gap:clamp(14px,2.4vw,36px);font-size:15px;font-weight:500;flex-wrap:wrap;justify-content:center">
+    <a href="#about">About</a>
+    <a href="#expertise">Expertise</a>
+    <a href="#work">Work</a>
+    <a href="#process">Process</a>
+    <a href="#journey">Journey</a>
+  </div>
+  <a href="#contact" data-navcta="" data-magnet="" style="display:flex;align-items:center;gap:10px;border:1.5px solid currentColor;border-radius:999px;padding:12px 22px;font-weight:600;font-size:15px;transition:background .4s, color .4s, border-color .4s, transform .4s cubic-bezier(.2,.8,.2,1)">Get in touch <span>→</span></a>
+</nav>
+
+<section id="top" style="min-height:100vh;padding:clamp(120px,16vh,170px) clamp(20px,4vw,64px) 70px;display:flex;flex-direction:column;gap:clamp(40px,6vh,70px)">
+  <div data-rv="up" style="opacity:0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#55524c">
+    <span style="display:flex;align-items:center;gap:16px"><span style="width:44px;height:1px;background:#55524c"></span>Digital marketer · Thrissur, Kerala · Trained 2026</span>
+    <a href="#contact" style="color:#111">Open to work →</a>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:clamp(40px,5vw,80px);align-items:center;justify-content:space-between">
+    <div style="flex:1 1 600px;display:flex;flex-direction:column;gap:36px;min-width:0">
+      <h1 data-rv="words" style="margin:0;font-weight:700;font-size:clamp(52px,7.4vw,128px);line-height:.96;letter-spacing:-0.045em;display:flex;flex-wrap:wrap;column-gap:.22em">
+        <sc-for list="{{ hHero.a }}" as="w" hint-placeholder-count="4"><span data-w="" style="display:inline-block;opacity:0">{{ w }}</span></sc-for>
+        <sc-for list="{{ hHero.b }}" as="w" hint-placeholder-count="3"><span data-w="" style="display:inline-block;opacity:0;font-family:Instrument Serif, serif;font-style:italic;font-weight:400;font-size:1.08em;letter-spacing:-0.015em;line-height:.9">{{ w }}</span></sc-for>
+      </h1>
+      <p data-rv="up" data-d="500" style="opacity:0;margin:0;max-width:40ch;font-size:clamp(18px,1.6vw,24px);line-height:1.45;color:#55524c;text-wrap:pretty">Digital marketer trained in SEO, Google Ads, Meta Ads, social, LinkedIn, content and email — with a service-first mindset from years of helping customers face to face.</p>
+      <div data-rv="up" data-d="650" style="opacity:0;display:flex;flex-wrap:wrap;gap:14px">
+        <a href="#contact" data-magnet="" style="display:flex;align-items:center;gap:14px;background:oklch(0.55 0.22 350);color:#fff;border-radius:999px;padding:20px 32px;font-weight:600;font-size:17px;transition:transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .3s" style-hover="box-shadow:0 14px 30px -10px oklch(0.55 0.22 350 / .6);color:#fff">Let's work together <span>→</span></a>
+        <a href="#work" data-magnet="" style="display:flex;align-items:center;border:1.5px solid rgba(17,17,17,.25);border-radius:999px;padding:20px 32px;font-weight:600;font-size:17px;transition:transform .4s cubic-bezier(.2,.8,.2,1), background .3s, border-color .3s" style-hover="background:#111;color:#eceae3;border-color:#111">See my work</a>
+      </div>
+    </div>
+    <div style="flex:0 1 560px;position:relative;margin:0 auto;width:100%;max-width:560px">
+      <div data-pop="" style="opacity:0;position:absolute;left:0;top:-20px;z-index:3;width:min(70%,340px)">
+        <div data-bob="" style="position:relative;background:#f2c230;border:2.5px solid #111;border-radius:22px;padding:22px 28px;text-align:center;transform:rotate(-4deg);box-shadow:0 6px 0 #111">
+          <span style="display:block;font-weight:700;font-size:clamp(22px,2vw,28px);letter-spacing:-0.03em;line-height:1.05">I find the keywords.</span>
+          <span style="display:block;font-family:Instrument Serif, serif;font-style:italic;font-size:clamp(25px,2.3vw,32px);line-height:1.05">You get the customers.</span>
+          <span style="position:absolute;left:50%;bottom:-13px;width:22px;height:22px;background:#f2c230;border-right:2.5px solid #111;border-bottom:2.5px solid #111;transform:translateX(-50%) rotate(45deg)"></span>
+          <span data-spark="" style="position:absolute;left:-12px;top:-12px;width:22px;height:22px;background:oklch(0.55 0.22 350);transform:rotate(45deg);border-radius:3px"></span>
+          <span data-badge="" style="position:absolute;right:-18px;top:-20px;width:46px;height:46px;border-radius:50%;background:oklch(0.55 0.15 245);border:2.5px solid #111;color:#fff;display:grid;place-items:center;font-size:20px;font-weight:700">↗</span>
+        </div>
+      </div>
+      <div data-rv="clipwrap" style="position:relative">
+        <div data-clip="" style="clip-path:inset(100% 0 0 0 round 28px);padding-top:110px">
+          <img data-heroimg="" src="assets/rositta-seo.png" alt="Illustration of Rositta inspecting a website for SEO" style="width:100%;height:auto;display:block;mix-blend-mode:multiply;transform:scale(1.2)">
+        </div>
+      </div>
+      <div data-rv="up" data-d="900" style="opacity:0;display:flex;justify-content:space-between;margin-top:16px;font-family:JetBrains Mono, monospace;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#55524c"><span>Rositta Chacko</span><span style="display:flex;align-items:center;gap:8px"><span data-pulse="" style="width:8px;height:8px;border-radius:50%;background:oklch(0.6 0.15 150)"></span>Available</span></div>
+    </div>
+  </div>
+</section>
+
+<div style="border-top:1px solid rgba(17,17,17,.15);border-bottom:1px solid rgba(17,17,17,.15);overflow:hidden;padding:20px 0">
+  <div data-mq="" style="display:flex;width:max-content;will-change:transform">
+    <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="8"><span style="display:flex;align-items:center;gap:28px;padding-right:28px;font-family:JetBrains Mono, monospace;font-size:14px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap">{{ m }}<span style="width:7px;height:7px;background:oklch(0.55 0.22 350);transform:rotate(45deg)"></span></span></sc-for>
+    <sc-for list="{{ marquee }}" as="m" hint-placeholder-count="8"><span style="display:flex;align-items:center;gap:28px;padding-right:28px;font-family:JetBrains Mono, monospace;font-size:14px;letter-spacing:.16em;text-transform:uppercase;white-space:nowrap">{{ m }}<span style="width:7px;height:7px;background:oklch(0.55 0.22 350);transform:rotate(45deg)"></span></span></sc-for>
+  </div>
+</div>
+
+<section id="about" style="padding:clamp(90px,12vw,170px) clamp(20px,4vw,64px);display:flex;flex-direction:column;gap:32px">
+  <span data-rv="up" style="opacity:0;display:flex;align-items:center;gap:16px;font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#55524c"><span style="width:44px;height:1px;background:#55524c"></span>01 / About</span>
+  <h2 data-rv="words" style="margin:0;font-weight:700;font-size:clamp(44px,6.2vw,108px);line-height:.98;letter-spacing:-0.045em;display:flex;flex-wrap:wrap;column-gap:.22em">
+    <sc-for list="{{ hAbout.a }}" as="w" hint-placeholder-count="3"><span data-w="" style="display:inline-block;opacity:0">{{ w }}</span></sc-for>
+    <sc-for list="{{ hAbout.b }}" as="w" hint-placeholder-count="2"><span data-w="" style="display:inline-block;opacity:0;font-family:Instrument Serif, serif;font-style:italic;font-weight:400;font-size:1.08em;letter-spacing:-0.015em">{{ w }}</span></sc-for>
+  </h2>
+  <p data-rv="up" style="opacity:0;margin:0;max-width:52ch;font-size:clamp(18px,1.6vw,23px);line-height:1.5;color:#55524c;text-wrap:pretty">A tourism graduate, travel-counter trainee and trained Montessori teacher who found her calling in digital marketing. Three chapters, one thread: helping people get what they came for.</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(28px,3vw,56px);margin-top:clamp(40px,6vw,90px)">
+    <sc-for list="{{ beliefs }}" as="b" hint-placeholder-count="3">
+      <div data-rv="up" style="opacity:0;border-top:1.5px solid #111;padding-top:40px;display:flex;flex-direction:column;justify-content:space-between;gap:40px">
+        <p style="margin:0;font-family:Instrument Serif, serif;font-style:italic;font-size:clamp(28px,2.6vw,40px);line-height:1.12;letter-spacing:-0.01em;text-wrap:pretty">{{ b.q }}</p>
+        <div style="display:flex;flex-direction:column;gap:8px">
+          <span style="font-weight:600;font-size:18px">{{ b.t }}</span>
+          <span style="font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.06em;color:#55524c">{{ b.s }}</span>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="expertise" data-dark="" style="background:#111;color:#f1efe8;padding:clamp(90px,12vw,170px) clamp(20px,4vw,64px)">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:clamp(60px,7vw,110px)">
+    <div style="flex:1 1 560px;display:flex;flex-direction:column;gap:28px;min-width:0">
+      <span data-rv="up" style="opacity:0;display:flex;align-items:center;gap:16px;font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#a8a49b"><span style="width:44px;height:1px;background:#a8a49b"></span>02 / Expertise</span>
+      <h2 data-rv="words" style="margin:0;font-weight:700;font-size:clamp(44px,6vw,104px);line-height:.98;letter-spacing:-0.045em;display:flex;flex-wrap:wrap;column-gap:.22em">
+        <sc-for list="{{ hExp.a }}" as="w" hint-placeholder-count="3"><span data-w="" style="display:inline-block;opacity:0">{{ w }}</span></sc-for>
+        <sc-for list="{{ hExp.b }}" as="w" hint-placeholder-count="3"><span data-w="" style="display:inline-block;opacity:0;font-family:Instrument Serif, serif;font-style:italic;font-weight:400;font-size:1.08em;letter-spacing:-0.015em">{{ w }}</span></sc-for>
+      </h2>
+    </div>
+    <p data-rv="up" data-d="200" style="opacity:0;flex:0 1 460px;margin:0;font-size:clamp(18px,1.5vw,22px);line-height:1.5;color:#a8a49b;text-wrap:pretty">Search brings people in, paid gets them there faster, social and content keep them close. Each channel does its part — together they make a brand easy to find.</p>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1px;background:rgba(241,239,232,.16);border:1px solid rgba(241,239,232,.16);border-radius:28px;overflow:hidden">
+
+    <div data-rv="up" style="opacity:0;background:#111;padding:clamp(26px,3vw,44px);display:flex;flex-direction:column;gap:14px;transition:background .4s, box-shadow .4s" style-hover="background:#1c1c1c;box-shadow:inset 0 4px 0 oklch(0.62 0.15 245)">
+      <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;color:#a8a49b">CHANNEL 01</span><span style="background:oklch(0.62 0.15 245);color:#111;border-radius:999px;padding:8px 16px;font-family:JetBrains Mono, monospace;font-size:12px;letter-spacing:.14em">CORE</span></div>
+      <div style="height:190px;display:grid;place-items:center">
+        <div style="position:relative;width:150px;height:150px;border-radius:50%;border:1px solid oklch(0.62 0.15 245 / .45)">
+          <span style="position:absolute;inset:25px;border-radius:50%;border:1px solid oklch(0.62 0.15 245 / .45)"></span>
+          <span style="position:absolute;inset:52px;border-radius:50%;border:1px solid oklch(0.62 0.15 245 / .45)"></span>
+          <span data-sweep="" style="position:absolute;left:50%;top:0;width:2px;height:50%;margin-left:-1px;background:oklch(0.62 0.15 245);transform-origin:50% 100%;box-shadow:0 0 16px oklch(0.62 0.15 245)"></span>
+          <span style="position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px;border-radius:50%;background:oklch(0.62 0.15 245)"></span>
+          <span data-blip="" style="position:absolute;left:96px;top:30px;width:8px;height:8px;border-radius:50%;background:oklch(0.62 0.15 245)"></span>
+          <span data-blip="" style="position:absolute;left:34px;top:94px;width:8px;height:8px;border-radius:50%;background:oklch(0.62 0.15 245)"></span>
+        </div>
+      </div>
+      <span style="font-weight:700;font-size:clamp(40px,3.6vw,58px);letter-spacing:-0.045em;line-height:1">SEO</span>
+      <span style="font-family:Instrument Serif, serif;font-style:italic;font-size:30px;color:#cfcbc1">Get found first.</span>
+      <span style="font-size:17px;line-height:1.55;color:#a8a49b">Keyword research, on-page and off-page fundamentals, and website optimization.</span>
+    </div>
+
+    <div data-rv="up" data-d="100" style="opacity:0;background:#111;padding:clamp(26px,3vw,44px);display:flex;flex-direction:column;gap:14px;transition:background .4s, box-shadow .4s" style-hover="background:#1c1c1c;box-shadow:inset 0 4px 0 oklch(0.62 0.22 350)">
+      <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;color:#a8a49b">CHANNEL 02</span><span style="border:1px solid rgba(241,239,232,.4);border-radius:999px;padding:8px 16px;font-family:JetBrains Mono, monospace;font-size:12px;letter-spacing:.14em">PAID</span></div>
+      <div style="height:190px;display:flex;align-items:flex-end;justify-content:center;gap:14px;padding-bottom:20px">
+        <span data-gbar="0" style="width:26px;height:60px;background:oklch(0.62 0.22 350 / .45);border-radius:4px;transform-origin:50% 100%"></span>
+        <span data-gbar="1" style="width:26px;height:95px;background:oklch(0.62 0.22 350 / .7);border-radius:4px;transform-origin:50% 100%"></span>
+        <span data-gbar="2" style="width:26px;height:130px;background:oklch(0.62 0.22 350);border-radius:4px;transform-origin:50% 100%"></span>
+      </div>
+      <span style="font-weight:700;font-size:clamp(40px,3.6vw,58px);letter-spacing:-0.045em;line-height:1">Google Ads</span>
+      <span style="font-family:Instrument Serif, serif;font-style:italic;font-size:30px;color:#cfcbc1">Show up at the search.</span>
+      <span style="font-size:17px;line-height:1.55;color:#a8a49b">Search campaign concepts, keyword intent and audience targeting basics.</span>
+    </div>
+
+    <div data-rv="up" data-d="200" style="opacity:0;background:#111;padding:clamp(26px,3vw,44px);display:flex;flex-direction:column;gap:14px;transition:background .4s, box-shadow .4s" style-hover="background:#1c1c1c;box-shadow:inset 0 4px 0 #f2c230">
+      <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;color:#a8a49b">CHANNEL 03</span><span style="border:1px solid rgba(241,239,232,.4);border-radius:999px;padding:8px 16px;font-family:JetBrains Mono, monospace;font-size:12px;letter-spacing:.14em">PAID</span></div>
+      <div style="height:190px;display:flex;align-items:center;justify-content:center">
+        <span data-mc="1" style="width:96px;height:96px;border-radius:50%;border:2px solid #f2c230;background:rgba(242,194,48,.18);margin-right:-30px"></span>
+        <span data-mc="-1" style="width:96px;height:96px;border-radius:50%;border:2px solid #f2c230;background:rgba(242,194,48,.18)"></span>
+      </div>
+      <span style="font-weight:700;font-size:clamp(40px,3.6vw,58px);letter-spacing:-0.045em;line-height:1">Meta Ads</span>
+      <span style="font-family:Instrument Serif, serif;font-style:italic;font-size:30px;color:#cfcbc1">Meet the right audience.</span>
+      <span style="font-size:17px;line-height:1.55;color:#a8a49b">Facebook and Instagram campaigns built around who you want to reach.</span>
+    </div>
+
+    <div data-rv="up" style="opacity:0;background:#111;padding:clamp(26px,3vw,44px);display:flex;flex-direction:column;gap:14px;transition:background .4s, box-shadow .4s" style-hover="background:#1c1c1c;box-shadow:inset 0 4px 0 oklch(0.62 0.22 350)">
+      <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;color:#a8a49b">CHANNEL 04</span><span style="border:1px solid rgba(241,239,232,.4);border-radius:999px;padding:8px 16px;font-family:JetBrains Mono, monospace;font-size:12px;letter-spacing:.14em">ORGANIC</span></div>
+      <div style="height:190px;display:grid;place-items:center">
+        <div data-orbit="" style="position:relative;width:140px;height:140px;border-radius:50%;border:1px dashed oklch(0.62 0.22 350 / .5)">
+          <span style="position:absolute;left:50%;top:-8px;width:16px;height:16px;margin-left:-8px;border-radius:50%;background:oklch(0.62 0.22 350)"></span>
+          <span style="position:absolute;left:4px;bottom:22px;width:12px;height:12px;border-radius:50%;background:#f2c230"></span>
+          <span style="position:absolute;right:6px;bottom:18px;width:12px;height:12px;border-radius:50%;background:oklch(0.62 0.15 245)"></span>
+        </div>
+      </div>
+      <span style="font-weight:700;font-size:clamp(40px,3.6vw,58px);letter-spacing:-0.045em;line-height:1">Social Media</span>
+      <span style="font-family:Instrument Serif, serif;font-style:italic;font-size:30px;color:#cfcbc1">Stay in the conversation.</span>
+      <span style="font-size:17px;line-height:1.55;color:#a8a49b">Online presence, audience engagement and steady brand visibility.</span>
+    </div>
+
+    <div data-rv="up" data-d="100" style="opacity:0;background:#111;padding:clamp(26px,3vw,44px);display:flex;flex-direction:column;gap:14px;transition:background .4s, box-shadow .4s" style-hover="background:#1c1c1c;box-shadow:inset 0 4px 0 oklch(0.62 0.15 245)">
+      <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;color:#a8a49b">CHANNEL 05</span><span style="border:1px solid rgba(241,239,232,.4);border-radius:999px;padding:8px 16px;font-family:JetBrains Mono, monospace;font-size:12px;letter-spacing:.14em">B2B</span></div>
+      <div style="height:190px;display:grid;place-items:center">
+        <div style="display:grid;grid-template-columns:repeat(3,34px);gap:10px">
+          <sc-for list="{{ cells }}" as="c" hint-placeholder-count="9"><span data-cell="" style="width:34px;height:34px;border-radius:7px;background:oklch(0.62 0.15 245);opacity:.15"></span></sc-for>
+        </div>
+      </div>
+      <span style="font-weight:700;font-size:clamp(40px,3.6vw,58px);letter-spacing:-0.045em;line-height:1">LinkedIn</span>
+      <span style="font-family:Instrument Serif, serif;font-style:italic;font-size:30px;color:#cfcbc1">Build the network.</span>
+      <span style="font-size:17px;line-height:1.55;color:#a8a49b">Professional networking, content distribution and business visibility.</span>
+    </div>
+
+    <div data-rv="up" data-d="200" style="opacity:0;background:#111;padding:clamp(26px,3vw,44px);display:flex;flex-direction:column;gap:14px;transition:background .4s, box-shadow .4s" style-hover="background:#1c1c1c;box-shadow:inset 0 4px 0 #f2c230">
+      <div style="display:flex;justify-content:space-between;align-items:center"><span style="font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;color:#a8a49b">CHANNEL 06</span><span style="border:1px solid rgba(241,239,232,.4);border-radius:999px;padding:8px 16px;font-family:JetBrains Mono, monospace;font-size:12px;letter-spacing:.14em">OWNED</span></div>
+      <div style="height:190px;display:grid;place-items:center">
+        <div style="width:170px;border:2px solid #f2c230;border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:11px">
+          <span data-tline="" style="height:7px;border-radius:4px;background:#f2c230;width:60%;transform-origin:0 50%"></span>
+          <span data-tline="" style="height:7px;border-radius:4px;background:rgba(242,194,48,.55);width:100%;transform-origin:0 50%"></span>
+          <span data-tline="" style="height:7px;border-radius:4px;background:rgba(242,194,48,.55);width:85%;transform-origin:0 50%"></span>
+          <span data-tline="" style="height:7px;border-radius:4px;background:rgba(242,194,48,.55);width:45%;transform-origin:0 50%"></span>
+        </div>
+      </div>
+      <span style="font-weight:700;font-size:clamp(40px,3.6vw,58px);letter-spacing:-0.045em;line-height:1">Content &amp; Email</span>
+      <span style="font-family:Instrument Serif, serif;font-style:italic;font-size:30px;color:#cfcbc1">Words that earn the click.</span>
+      <span style="font-size:17px;line-height:1.55;color:#a8a49b">Content creation and optimization, plus email campaigns with a clear purpose.</span>
+    </div>
+  </div>
+</section>
+
+<section id="work" style="padding:clamp(90px,12vw,170px) clamp(20px,4vw,64px)">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:40px;margin-bottom:clamp(60px,7vw,110px)">
+    <div style="flex:1 1 600px;display:flex;flex-direction:column;gap:28px;min-width:0">
+      <span data-rv="up" style="opacity:0;display:flex;align-items:center;gap:16px;font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#55524c"><span style="width:44px;height:1px;background:#55524c"></span>03 / Case study · Adel Group</span>
+      <h2 data-rv="words" style="margin:0;font-weight:700;font-size:clamp(44px,6.2vw,108px);line-height:.98;letter-spacing:-0.045em;display:flex;flex-wrap:wrap;column-gap:.22em">
+        <sc-for list="{{ hWork.a }}" as="w" hint-placeholder-count="6"><span data-w="" style="display:inline-block;opacity:0">{{ w }}</span></sc-for>
+        <sc-for list="{{ hWork.b }}" as="w" hint-placeholder-count="4"><span data-w="" style="display:inline-block;opacity:0;font-family:Instrument Serif, serif;font-style:italic;font-weight:400;font-size:1.08em;letter-spacing:-0.015em">{{ w }}</span></sc-for>
+      </h2>
+    </div>
+    <p data-rv="up" data-d="200" style="opacity:0;flex:0 1 480px;margin:0;font-size:clamp(18px,1.5vw,22px);line-height:1.5;color:#55524c;text-wrap:pretty">A full website and SEO audit for a Kenya-based recruitment agency placing workers with Middle East employers. Crawled with Screaming Frog, graded for health, benchmarked against four competitors, and turned into a prioritised fix list.</p>
+  </div>
+
+  <div data-rv="up" style="opacity:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:1px;background:rgba(17,17,17,.15);border:1px solid rgba(17,17,17,.15);border-radius:28px;overflow:hidden">
+    <div data-rv="ring" style="background:#eceae3;padding:clamp(28px,4vw,64px);display:flex;flex-direction:column;gap:36px">
+      <span style="font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;color:#55524c">SEO HEALTH · OVERALL</span>
+      <div style="display:flex;flex-wrap:wrap;align-items:center;gap:clamp(24px,3vw,44px)">
+        <svg viewBox="0 0 200 200" style="width:clamp(160px,15vw,230px);height:auto;transform:rotate(-90deg);flex:none">
+          <circle cx="100" cy="100" r="88" fill="none" stroke="#d6d2c8" stroke-width="14"></circle>
+          <circle data-ring="0.58" cx="100" cy="100" r="88" fill="none" stroke="oklch(0.55 0.15 245)" stroke-width="14" stroke-linecap="round" stroke-dasharray="552.9" stroke-dashoffset="552.9"></circle>
+        </svg>
+        <div style="display:flex;flex-direction:column;gap:14px;flex:1 1 220px">
+          <span style="font-weight:700;font-size:clamp(90px,9vw,150px);line-height:.85;letter-spacing:-0.05em">C+<span style="font-size:.3em;font-weight:500;color:#55524c;letter-spacing:-0.02em"> /grade</span></span>
+          <span style="font-size:18px;line-height:1.55;color:#55524c;max-width:30ch">Five recommendations found. Strong on GEO and performance; usability and links need the most work.</span>
+        </div>
+      </div>
+      <span style="font-family:JetBrains Mono, monospace;font-size:13px;color:#55524c">Audit tool · Screaming Frog SEO Spider · Oct 2026</span>
+    </div>
+    <div style="background:#eceae3;padding:clamp(28px,4vw,64px);display:flex;flex-direction:column;gap:10px">
+      <span style="font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;color:#55524c;margin-bottom:20px">CATEGORY GRADES · 5 AREAS</span>
+      <div data-rv="bars" style="display:flex;flex-direction:column">
+        <sc-for list="{{ grades }}" as="g" hint-placeholder-count="5">
+          <div style="display:grid;grid-template-columns:40px minmax(0,1fr) 44px;gap:18px;align-items:center;padding:20px 0;border-bottom:1px solid rgba(17,17,17,.12)">
+            <span style="font-family:JetBrains Mono, monospace;font-size:14px;color:#55524c">{{ g.n }}</span>
+            <div style="display:flex;flex-direction:column;gap:12px">
+              <span style="font-size:21px;font-weight:500">{{ g.k }}</span>
+              <span style="height:7px;border-radius:4px;background:#d6d2c8;overflow:hidden;display:block"><span data-bar="{{ g.v }}" data-low="{{ g.low }}" style="display:block;height:100%;width:0%;border-radius:4px;background:oklch(0.55 0.15 245)"></span></span>
+            </div>
+            <span style="font-weight:700;font-size:22px;text-align:right">{{ g.g }}</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr));gap:clamp(20px,3vw,48px);margin-top:clamp(60px,7vw,100px)">
+    <sc-for list="{{ findings }}" as="f" hint-placeholder-count="4">
+      <div data-rv="up" style="opacity:0;border-top:1.5px solid #111;padding-top:28px;display:flex;flex-direction:column;gap:12px">
+        <span data-rv="count" data-count="{{ f.v }}" style="font-weight:700;font-size:clamp(64px,6.5vw,104px);line-height:.9;letter-spacing:-0.05em">0</span>
+        <span style="font-size:17px;line-height:1.45;color:#55524c;max-width:24ch">{{ f.k }}</span>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:18px;margin-top:clamp(60px,7vw,100px)">
+    <div data-rv="up" style="opacity:0;background:#111;color:#f1efe8;border-radius:28px;padding:clamp(28px,3.5vw,52px);display:flex;flex-direction:column;gap:26px">
+      <span style="font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;color:#a8a49b">HOMEPAGE TITLE · REWRITE</span>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-family:JetBrains Mono, monospace;font-size:12px;letter-spacing:.1em;color:oklch(0.7 0.18 350)">BEFORE · 68 CHARACTERS</span>
+        <span style="font-size:clamp(17px,1.5vw,21px);line-height:1.45;color:#a8a49b;text-decoration:line-through;text-decoration-color:oklch(0.7 0.18 350)">Adel group -recruitment &amp;manpower Solutions /kenya to middle East</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <span style="font-family:JetBrains Mono, monospace;font-size:12px;letter-spacing:.1em;color:oklch(0.75 0.13 150)">AFTER · 51 CHARACTERS</span>
+        <span style="font-family:Instrument Serif, serif;font-style:italic;font-size:clamp(30px,3vw,46px);line-height:1.1;min-height:2.2em"><span data-rv="type">Adel Group | Kenya Recruitment &amp; Manpower Solutions</span><span data-caret="" style="display:inline-block;width:2px;height:.85em;background:#f1efe8;margin-left:5px;vertical-align:-0.06em"></span></span>
+      </div>
+    </div>
+    <div data-rv="up" data-d="120" style="opacity:0;border:1px solid rgba(17,17,17,.15);border-radius:28px;padding:clamp(28px,3.5vw,52px);display:flex;flex-direction:column;gap:22px">
+      <span style="font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;color:#55524c">TARGET KEYWORDS</span>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <sc-for list="{{ keywords }}" as="k" hint-placeholder-count="5"><span style="border:1.5px solid #111;border-radius:999px;padding:11px 18px;font-size:16px;font-weight:600;transition:background .3s, color .3s, transform .3s" style-hover="background:oklch(0.55 0.22 350);border-color:oklch(0.55 0.22 350);color:#fff;transform:translateY(-3px) rotate(-2deg)">{{ k }}</span></sc-for>
+      </div>
+      <span style="font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;color:#55524c;margin-top:8px">PRIORITY FIXES</span>
+      <div style="display:flex;flex-direction:column">
+        <sc-for list="{{ fixes }}" as="x" hint-placeholder-count="4"><span style="display:flex;gap:14px;padding:13px 0;border-top:1px solid rgba(17,17,17,.12);font-size:17px;line-height:1.4"><span style="color:oklch(0.55 0.22 350);font-weight:700">→</span>{{ x }}</span></sc-for>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="process" style="padding:0 clamp(20px,4vw,64px) clamp(90px,12vw,170px);display:flex;flex-direction:column;gap:32px">
+  <span data-rv="up" style="opacity:0;display:flex;align-items:center;gap:16px;font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#55524c"><span style="width:44px;height:1px;background:#55524c"></span>04 / How I work</span>
+  <h2 data-rv="words" style="margin:0 0 clamp(40px,5vw,80px);font-weight:700;font-size:clamp(44px,6.2vw,108px);line-height:.98;letter-spacing:-0.045em;display:flex;flex-wrap:wrap;column-gap:.22em">
+    <sc-for list="{{ hProc.a }}" as="w" hint-placeholder-count="4"><span data-w="" style="display:inline-block;opacity:0">{{ w }}</span></sc-for>
+    <sc-for list="{{ hProc.b }}" as="w" hint-placeholder-count="3"><span data-w="" style="display:inline-block;opacity:0;font-family:Instrument Serif, serif;font-style:italic;font-weight:400;font-size:1.08em;letter-spacing:-0.015em">{{ w }}</span></sc-for>
+  </h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));border-bottom:1px solid rgba(17,17,17,.18)">
+    <sc-for list="{{ steps }}" as="s" hint-placeholder-count="4">
+      <div data-rv="up" data-step="" style="opacity:0;position:relative;padding:clamp(28px,3vw,44px) clamp(20px,2.4vw,40px) clamp(40px,4vw,64px);border-left:1px solid rgba(17,17,17,.18);display:flex;flex-direction:column;gap:20px;transition:background .5s">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <span data-stepnum="" style="font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.14em;color:#55524c;transition:color .5s">{{ s.n }}</span>
+          <span style="font-size:24px;color:#55524c">→</span>
+        </div>
+        <span style="font-weight:700;font-size:clamp(40px,3.8vw,64px);letter-spacing:-0.045em;line-height:1">{{ s.t }}</span>
+        <span style="font-size:18px;line-height:1.55;color:#55524c;text-wrap:pretty">{{ s.d }}</span>
+        <span data-stepbar="" style="position:absolute;left:-1px;right:0;bottom:-1px;height:3px;background:oklch(0.55 0.22 350);transform-origin:0 50%;transform:scaleX(0)"></span>
+      </div>
+    </sc-for>
+  </div>
+</section>
+
+<section id="journey" style="padding:clamp(90px,12vw,170px) clamp(20px,4vw,64px);border-top:1px solid rgba(17,17,17,.15);display:flex;flex-wrap:wrap;gap:clamp(48px,6vw,110px)">
+  <div style="flex:1 1 420px;display:flex;flex-direction:column;gap:30px;min-width:0">
+    <span data-rv="up" style="opacity:0;display:flex;align-items:center;gap:16px;font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#55524c"><span style="width:44px;height:1px;background:#55524c"></span>05 / Who is Rositta?</span>
+    <h2 data-rv="words" style="margin:0;font-weight:700;font-size:clamp(52px,7vw,124px);line-height:.95;letter-spacing:-0.045em;display:flex;flex-wrap:wrap;column-gap:.22em">
+      <sc-for list="{{ hWho.a }}" as="w" hint-placeholder-count="3"><span data-w="" style="display:inline-block;opacity:0">{{ w }}</span></sc-for>
+      <sc-for list="{{ hWho.b }}" as="w" hint-placeholder-count="2"><span data-w="" style="display:inline-block;opacity:0;font-family:Instrument Serif, serif;font-style:italic;font-weight:400;font-size:1.08em;letter-spacing:-0.015em">{{ w }}</span></sc-for>
+    </h2>
+    <div data-rv="up" style="opacity:0;display:flex;flex-direction:column;gap:18px;max-width:520px;width:100%">
+      <div style="aspect-ratio:1/1;width:100%;border-radius:24px;overflow:hidden;border:1px solid rgba(17,17,17,.15);background:#fff">
+        <img src="assets/rositta-headshot.png" alt="Rositta Chacko" style="width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block;transition:transform .8s cubic-bezier(.2,.8,.2,1)" style-hover="transform:scale(1.05)">
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <span style="font-weight:600;font-size:20px">Rositta Chacko</span>
+        <span style="font-family:JetBrains Mono, monospace;font-size:13px;color:#55524c">Digital Marketer · Malayalam, English</span>
+      </div>
+    </div>
+    <div data-rv="up" style="opacity:0;display:flex;flex-wrap:wrap;gap:10px;max-width:560px">
+      <sc-for list="{{ soft }}" as="s" hint-placeholder-count="8"><span style="border:1px solid rgba(17,17,17,.25);border-radius:999px;padding:10px 16px;font-size:15px;transition:background .3s, color .3s" style-hover="background:#111;color:#eceae3">{{ s }}</span></sc-for>
+    </div>
+  </div>
+  <div style="flex:1 1 560px;display:flex;flex-direction:column;gap:40px;min-width:0">
+    <p data-rv="words" style="margin:0;font-weight:500;font-size:clamp(30px,3.2vw,54px);line-height:1.08;letter-spacing:-0.035em;display:flex;flex-wrap:wrap;column-gap:.24em">
+      <sc-for list="{{ hState.a }}" as="w" hint-placeholder-count="3"><span data-w="" style="display:inline-block;opacity:0">{{ w }}</span></sc-for>
+      <sc-for list="{{ hState.b }}" as="w" hint-placeholder-count="6"><span data-w="" style="display:inline-block;opacity:0;font-family:Instrument Serif, serif;font-style:italic;font-weight:400;font-size:1.08em;letter-spacing:-0.01em">{{ w }}</span></sc-for>
+    </p>
+    <p data-rv="up" style="opacity:0;margin:0;font-size:clamp(18px,1.4vw,21px);line-height:1.6;color:#55524c;max-width:56ch;text-wrap:pretty"><strong style="color:#111;font-weight:600">I completed a full digital marketing program at Obsqura Zone in 2026.</strong> Before that, I handled bookings, billing and customer records at a busy travel counter — the best training there is for understanding what people actually need.</p>
+    <div style="display:flex;flex-direction:column;border-top:1.5px solid #111">
+      <sc-for list="{{ timeline }}" as="t" hint-placeholder-count="5">
+        <div data-rv="up" style="opacity:0;display:grid;grid-template-columns:minmax(80px,120px) minmax(0,1fr);gap:20px;padding:22px 12px;border-bottom:1px solid rgba(17,17,17,.15);transition:background .35s, padding .35s" style-hover="background:#e2dfd5;padding-left:22px">
+          <span style="font-family:JetBrains Mono, monospace;font-size:14px;color:oklch(0.55 0.22 350);padding-top:4px">{{ t.y }}</span>
+          <div style="display:flex;flex-direction:column;gap:4px">
+            <span style="font-weight:600;font-size:21px;letter-spacing:-0.02em">{{ t.t }}</span>
+            <span style="font-size:16px;color:#55524c">{{ t.p }}</span>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+</section>
+
+<section id="contact" data-dark="" style="background:#111;color:#f1efe8;padding:clamp(100px,13vw,190px) clamp(20px,4vw,64px) 40px;display:flex;flex-direction:column;gap:clamp(60px,8vw,120px)">
+  <div style="display:flex;flex-direction:column;gap:30px">
+    <span data-rv="up" style="opacity:0;display:flex;align-items:center;gap:16px;font-family:JetBrains Mono, monospace;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:#a8a49b"><span style="width:44px;height:1px;background:#a8a49b"></span>06 / Contact</span>
+    <h2 data-rv="words" style="margin:0;font-weight:700;font-size:clamp(56px,8.6vw,160px);line-height:.94;letter-spacing:-0.05em;display:flex;flex-wrap:wrap;column-gap:.22em">
+      <sc-for list="{{ hContact.a }}" as="w" hint-placeholder-count="3"><span data-w="" style="display:inline-block;opacity:0">{{ w }}</span></sc-for>
+      <sc-for list="{{ hContact.b }}" as="w" hint-placeholder-count="3"><span data-w="" style="display:inline-block;opacity:0;font-family:Instrument Serif, serif;font-style:italic;font-weight:400;font-size:1.08em;letter-spacing:-0.015em">{{ w }}</span></sc-for>
+    </h2>
+    <div data-rv="up" data-d="300" style="opacity:0;display:flex;flex-wrap:wrap;gap:14px;margin-top:20px">
+      <a href="mailto:chackorositta31@gmail.com" data-magnet="" style="display:flex;align-items:center;gap:14px;background:oklch(0.55 0.22 350);color:#fff;border-radius:999px;padding:22px 34px;font-weight:600;font-size:18px;transition:transform .4s cubic-bezier(.2,.8,.2,1)" style-hover="color:#fff">Email me <span>→</span></a>
+      <a href="tel:+919746593147" data-magnet="" style="display:flex;align-items:center;border:1.5px solid rgba(241,239,232,.35);border-radius:999px;padding:22px 34px;font-weight:600;font-size:18px;transition:transform .4s cubic-bezier(.2,.8,.2,1), background .3s, color .3s" style-hover="background:#f1efe8;color:#111">+91 97465 93147</a>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:24px;border-top:1px solid rgba(241,239,232,.18);padding-top:28px;font-size:16px">
+    <div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:JetBrains Mono, monospace;font-size:12px;letter-spacing:.14em;color:#a8a49b">EMAIL</span><a href="mailto:chackorositta31@gmail.com" style="word-break:break-all">chackorositta31@gmail.com</a></div>
+    <div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:JetBrains Mono, monospace;font-size:12px;letter-spacing:.14em;color:#a8a49b">BASED IN</span><span>Kandassankadavu, Thrissur, Kerala</span></div>
+    <div style="display:flex;flex-direction:column;gap:8px"><span style="font-family:JetBrains Mono, monospace;font-size:12px;letter-spacing:.14em;color:#a8a49b">© 2026</span><span>Rositta Chacko</span></div>
+    <div style="display:flex;flex-direction:column;gap:8px;align-items:flex-start"><span style="font-family:JetBrains Mono, monospace;font-size:12px;letter-spacing:.14em;color:#a8a49b">NAVIGATE</span><a href="#top">Back to top ↑</a></div>
+  </div>
+</section>
+
+<sc-if value="{{ showFloat }}" hint-placeholder-val="{{ false }}">
+  <a href="#contact" data-float="" style="position:fixed;right:clamp(16px,2.4vw,36px);bottom:clamp(16px,2.4vw,36px);z-index:90;display:flex;align-items:center;gap:10px;background:#fff;color:#111;border:1px solid rgba(17,17,17,.12);border-radius:999px;padding:14px 22px 14px 16px;font-weight:600;font-size:16px;box-shadow:0 12px 30px -12px rgba(0,0,0,.35);opacity:0;transform:translateY(20px);pointer-events:none;transition:opacity .4s, transform .4s"><span style="width:22px;height:22px;border-radius:50%;background:oklch(0.55 0.15 245);color:#fff;display:grid;place-items:center;font-size:13px">✦</span>Hire Rositta</a>
+</sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;floatingCTA&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;processAutoplay&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;marqueeSpeed&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:1,&quot;min&quot;:0.3,&quot;max&quot;:3,&quot;step&quot;:0.1,&quot;tsType&quot;:&quot;number&quot;}}">
+class Component extends DCLogic {
+  rootRef = React.createRef();
+  renderVals() {
+    const sp = s => s.split(' ');
+    return {
+      rootRef: this.rootRef,
+      showFloat: this.props.floatingCTA ?? true,
+      hHero: { a: sp('Rositta helps brands get'), b: sp('found, clicked & remembered.') },
+      hAbout: { a: sp('It starts with'), b: sp('being understood.') },
+      hExp: { a: sp('Six channels keep brands'), b: sp('close to customers.') },
+      hWork: { a: sp('Good SEO starts where a page'), b: sp('says what it means.') },
+      hProc: { a: sp('Start with what people'), b: sp('are searching for.') },
+      hWho: { a: sp('The person behind'), b: sp('the work.') },
+      hState: { a: sp('Service-first marketing.'), b: sp('Shaped by years of listening to customers.') },
+      hContact: { a: sp("Let's make your brand"), b: sp('easy to find.') },
+      marquee: ['Search engine optimization', 'Google Ads', 'Meta Ads', 'Social media', 'LinkedIn marketing', 'Content creation', 'Email marketing', 'Keyword research', 'Website audits'],
+      beliefs: [
+        { q: '“Every customer arrives with a question. Good marketing answers it before they have to ask.”', t: 'From the travel counter', s: 'Akbar Travels of India · 2018–19' },
+        { q: '“Explain it simply, repeat it patiently, and let people discover the rest themselves.”', t: 'From the classroom', s: 'Montessori Teacher Training · 2025' },
+        { q: '“Visibility isn’t luck. It’s keywords, structure and content that search engines can read.”', t: 'From the marketing desk', s: 'Obsqura Zone · 2026' }
+      ],
+      cells: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+      grades: [
+        { n: '01', k: 'GEO', g: 'A−', v: 92, low: 0 },
+        { n: '02', k: 'Performance', g: 'B+', v: 86, low: 0 },
+        { n: '03', k: 'On-page SEO', g: 'B−', v: 72, low: 0 },
+        { n: '04', k: 'Usability', g: 'D+', v: 42, low: 1 },
+        { n: '05', k: 'Links', g: 'F', v: 16, low: 1 }
+      ],
+      findings: [
+        { v: 17, k: 'page titles running past 60 characters' },
+        { v: 6, k: 'meta descriptions over 155 characters' },
+        { v: 46, k: 'words on the homepage — thin content' },
+        { v: 2, k: 'images missing alt attributes' }
+      ],
+      keywords: ['overseas manpower recruitment', 'overseas manpower consultancy', 'job hiring agency', 'hire recruiter', 'recruitment service'],
+      fixes: ['Add one H1 and a logical H2–H6 hierarchy', 'Shorten titles to 50–60 characters', 'Expand thin pages with keyword-led copy', 'Write descriptive alt text for every image'],
+      steps: [
+        { n: '01', t: 'Research', d: 'Keyword research and audience basics — learn what people actually type before writing a word.' },
+        { n: '02', t: 'Optimize', d: 'Titles, metas, headings and alt text tuned so search engines read the page right.' },
+        { n: '03', t: 'Promote', d: 'Google Ads, Meta Ads, social and LinkedIn put the message where the audience already is.' },
+        { n: '04', t: 'Refine', d: 'Review what worked, improve the content and keep every campaign getting better.' }
+      ],
+      timeline: [
+        { y: '2026', t: 'Digital Marketing Course', p: 'Obsqura Zone · 8 June – 3 September' },
+        { y: '2025', t: 'Montessori Teacher Training (MTTC)', p: 'Interval Learning Academy' },
+        { y: '2019', t: 'IATA Certification', p: 'Travel industry credential' },
+        { y: '2018–19', t: 'Counter Staff Trainee', p: 'Akbar Travels of India — enquiries, billing, payments, records' },
+        { y: '2018', t: 'BA Tourism Studies', p: 'Nirmala College of Information Technology' }
+      ],
+      soft: ['Customer service', 'Communication', 'Teamwork', 'Time management', 'Problem solving', 'Attention to detail', 'Billing & payments', 'Record keeping']
+    };
+  }
+
+  componentDidMount() {
+    const R = this.rootRef.current;
+    if (!R) return;
+    const q = s => [...R.querySelectorAll(s)];
+    const ease = 'cubic-bezier(.2,.8,.2,1)';
+    const speed = this.props.marqueeSpeed ?? 1;
+    this.timers = [];
+    q('[data-rv="type"]').forEach(el => { el.dataset.text = el.textContent; el.textContent = ''; });
+
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (!e.isIntersecting) return;
+      io.unobserve(e.target);
+      const el = e.target, type = el.dataset.rv, d = +(el.dataset.d || 0);
+      if (type === 'words') el.querySelectorAll('[data-w]').forEach((w, i) => w.animate(
+        [{ opacity: 0, transform: 'translateY(.4em)', filter: 'blur(12px)' }, { opacity: 1, transform: 'none', filter: 'blur(0)' }],
+        { duration: 950, delay: d + i * 60, easing: ease, fill: 'forwards' }));
+      if (type === 'up') el.animate([{ opacity: 0, transform: 'translateY(40px)' }, { opacity: 1, transform: 'none' }], { duration: 1000, delay: d, easing: ease, fill: 'forwards' });
+      if (type === 'clipwrap') {
+        const c = el.querySelector('[data-clip]'), img = el.querySelector('img');
+        c.animate([{ clipPath: 'inset(100% 0 0 0 round 28px)' }, { clipPath: 'inset(0 0 0 0 round 28px)' }], { duration: 1500, delay: 200, easing: 'cubic-bezier(.7,0,.2,1)', fill: 'forwards' });
+        if (img) img.animate([{ transform: 'scale(1.2)' }, { transform: 'scale(1)' }], { duration: 2000, delay: 200, easing: ease, fill: 'forwards' });
+        const pop = R.querySelector('[data-pop]');
+        if (pop) pop.animate([{ opacity: 0, transform: 'scale(.4) rotate(-14deg)' }, { opacity: 1, transform: 'scale(1) rotate(0)' }], { duration: 900, delay: 1300, easing: 'cubic-bezier(.3,1.6,.5,1)', fill: 'forwards' });
+      }
+      if (type === 'ring') {
+        const c = el.querySelector('[data-ring]'), C = 552.9, v = +c.dataset.ring;
+        c.animate([{ strokeDashoffset: C }, { strokeDashoffset: C * (1 - v) }], { duration: 2000, easing: ease, fill: 'forwards' });
+      }
+      if (type === 'bars') el.querySelectorAll('[data-bar]').forEach((b, i) => {
+        if (b.dataset.low === '1') b.style.background = 'oklch(0.55 0.22 350)';
+        b.animate([{ width: '0%' }, { width: b.dataset.bar + '%' }], { duration: 1500, delay: i * 140, easing: ease, fill: 'forwards' });
+      });
+      if (type === 'count') {
+        const target = +el.dataset.count, t0 = performance.now();
+        const step = now => { const p = Math.min(1, (now - t0) / 1600); el.textContent = Math.round((1 - Math.pow(1 - p, 4)) * target); if (p < 1) requestAnimationFrame(step); };
+        requestAnimationFrame(step);
+      }
+      if (type === 'type') {
+        const full = el.dataset.text || ''; let i = 0;
+        const iv = setInterval(() => { i++; el.textContent = full.slice(0, i); if (i >= full.length) clearInterval(iv); }, 48);
+        this.timers.push(iv);
+      }
+    }), { threshold: 0.12, rootMargin: '0px 0px -5% 0px' });
+    q('[data-rv]').forEach(el => io.observe(el));
+    this.io = io;
+
+    const loop = (sel, kf, opt) => q(sel).forEach((el, i) => el.animate(kf(el, i), typeof opt === 'function' ? opt(el, i) : opt));
+    loop('[data-bob]', () => [{ transform: 'rotate(-4deg) translateY(0)' }, { transform: 'rotate(-1.5deg) translateY(-10px)' }], { duration: 2600, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out' });
+    loop('[data-spark]', () => [{ transform: 'rotate(45deg) scale(.8)' }, { transform: 'rotate(135deg) scale(1.15)' }], { duration: 1400, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out' });
+    loop('[data-badge]', () => [{ transform: 'rotate(0)' }, { transform: 'rotate(360deg)' }], { duration: 6000, iterations: Infinity });
+    loop('[data-pulse]', () => [{ boxShadow: '0 0 0 0 oklch(0.6 0.15 150 / .6)' }, { boxShadow: '0 0 0 10px oklch(0.6 0.15 150 / 0)' }], { duration: 1600, iterations: Infinity });
+    loop('[data-caret]', () => [{ opacity: 1 }, { opacity: 0 }], { duration: 600, iterations: Infinity, direction: 'alternate', easing: 'steps(1)' });
+    loop('[data-sweep]', () => [{ transform: 'rotate(0)' }, { transform: 'rotate(360deg)' }], { duration: 3200, iterations: Infinity });
+    loop('[data-blip]', () => [{ opacity: .15, transform: 'scale(.6)' }, { opacity: 1, transform: 'scale(1.3)' }, { opacity: .15, transform: 'scale(.6)' }], (el, i) => ({ duration: 3200, delay: i * 1200, iterations: Infinity }));
+    loop('[data-gbar]', () => [{ transform: 'scaleY(.35)' }, { transform: 'scaleY(1)' }], (el, i) => ({ duration: 1100, delay: i * 180, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out' }));
+    loop('[data-mc]', el => [{ transform: 'translateX(0)' }, { transform: `translateX(${18 * +el.dataset.mc}px)` }], { duration: 1500, iterations: Infinity, direction: 'alternate', easing: 'ease-in-out' });
+    loop('[data-orbit]', () => [{ transform: 'rotate(0)' }, { transform: 'rotate(360deg)' }], { duration: 7000, iterations: Infinity });
+    loop('[data-cell]', () => [{ opacity: .15 }, { opacity: 1 }, { opacity: .15 }], (el, i) => ({ duration: 2400, delay: [0, 3, 6, 1, 4, 7, 2, 5, 8][i] * 220, iterations: Infinity }));
+    loop('[data-tline]', () => [{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }, { transform: 'scaleX(1)' }], (el, i) => ({ duration: 2600, delay: i * 250, iterations: Infinity, easing: ease }));
+
+    const steps = q('[data-step]');
+    if (steps.length && (this.props.processAutoplay ?? true)) {
+      let si = -1;
+      const setActive = () => {
+        si = (si + 1) % steps.length;
+        steps.forEach((s, i) => {
+          const on = i === si;
+          s.style.background = on ? '#e2dfd5' : 'transparent';
+          s.querySelector('[data-stepnum]').style.color = on ? 'oklch(0.55 0.22 350)' : '#55524c';
+          const bar = s.querySelector('[data-stepbar]');
+          bar.getAnimations().forEach(a => a.cancel());
+          if (on) bar.animate([{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: 2400, easing: 'linear', fill: 'forwards' });
+        });
+      };
+      setActive();
+      this.timers.push(setInterval(setActive, 2400));
+    }
+
+    this.magnetOff = [];
+    q('[data-magnet]').forEach(el => {
+      const mv = e => { const r = el.getBoundingClientRect(); el.style.transform = `translate(${(e.clientX - r.left - r.width / 2) * 0.25}px, ${(e.clientY - r.top - r.height / 2) * 0.3}px)`; };
+      const lv = () => { el.style.transform = ''; };
+      el.addEventListener('mousemove', mv); el.addEventListener('mouseleave', lv);
+      this.magnetOff.push(() => { el.removeEventListener('mousemove', mv); el.removeEventListener('mouseleave', lv); });
+    });
+
+    const nav = R.querySelector('[data-nav]'), cta = R.querySelector('[data-navcta]');
+    const darks = q('[data-dark]'), mq = R.querySelector('[data-mq]'), heroImg = R.querySelector('[data-heroimg]');
+    let mx = 0, lastY = window.scrollY, vel = 0, navState = '';
+    const frame = () => {
+      const y = window.scrollY, vh = innerHeight;
+      vel += ((y - lastY) - vel) * 0.1; lastY = y;
+      const dark = darks.some(d => { const r = d.getBoundingClientRect(); return r.top <= 40 && r.bottom >= 40; });
+      const scrolled = y > 30;
+      const st = (dark ? 'd' : 'l') + (scrolled ? 's' : '');
+      if (st !== navState && nav) {
+        navState = st;
+        nav.style.background = scrolled ? (dark ? 'rgba(17,17,17,.82)' : 'rgba(236,234,227,.82)') : 'transparent';
+        nav.style.backdropFilter = nav.style.webkitBackdropFilter = scrolled ? 'blur(14px)' : 'none';
+        nav.style.color = dark ? '#f1efe8' : '#111';
+        nav.style.borderBottomColor = scrolled ? (dark ? 'rgba(241,239,232,.14)' : 'rgba(17,17,17,.12)') : 'transparent';
+        cta.style.background = scrolled ? 'oklch(0.55 0.22 350)' : 'transparent';
+        cta.style.borderColor = scrolled ? 'oklch(0.55 0.22 350)' : 'currentColor';
+        cta.style.color = scrolled ? '#fff' : '';
+      }
+      if (mq) {
+        const w = mq.scrollWidth / 2;
+        mx -= 0.7 * speed + Math.abs(vel) * 0.25;
+        if (mx <= -w) mx += w;
+        mq.style.transform = `translateX(${mx}px)`;
+      }
+      if (heroImg && y < vh * 1.2) heroImg.parentNode.style.transform = `translateY(${y * 0.06}px)`;
+      const fl = R.querySelector('[data-float]');
+      if (fl) { const on = y > vh * 0.7; fl.style.opacity = on ? '1' : '0'; fl.style.transform = on ? 'none' : 'translateY(20px)'; fl.style.pointerEvents = on ? 'auto' : 'none'; }
+      this.raf = requestAnimationFrame(frame);
+    };
+    this.raf = requestAnimationFrame(frame);
+  }
+
+  componentWillUnmount() {
+    cancelAnimationFrame(this.raf);
+    (this.timers || []).forEach(t => { clearInterval(t); clearTimeout(t); });
+    this.io && this.io.disconnect();
+    (this.magnetOff || []).forEach(f => f());
+  }
+}
+</script>
+</body>
+</html>
